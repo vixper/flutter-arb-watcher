@@ -1,5 +1,7 @@
 const vscode = require('vscode');
 const { exec } = require('child_process');
+const fs = require('fs');
+const path = require('path');
 
 function activate(context: any) {
     console.log('Flutter ARB Watcher attivo!');
@@ -22,6 +24,10 @@ function runFlutterGen() {
     const workspaceFolder = vscode.workspace.workspaceFolders ? vscode.workspace.workspaceFolders[0].uri.fsPath : null;
 
     if (!workspaceFolder) {return;}
+
+    if (!fs.existsSync(path.join(workspaceFolder, 'l10n.yaml')) || !fs.existsSync(path.join(workspaceFolder, 'assets', 'i18n', 'app_it.arb'))) {
+        return; // Evita di lanciare il comando se il progetto non usa gen-l10n
+    }
 
     // Mostra un messaggio nella status bar
     vscode.window.setStatusBarMessage('$(sync~spin) Rigenerazione l10n...', 2000);

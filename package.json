@@ -3,7 +3,9 @@
   "displayName": "Flutter .arb Watcher",
   "description": "Rigenera automaticamente le traduzioni ogni volta che salvi un file .arb in un progetto Flutter.",
   "version": "1.0.0",
-  "publisher": "Vincenzo Perrone",
+  "author": "Vincenzo Perrone",
+  "publisher": "vixper",
+  "repository": "https://github.com/vixper/flutter-arb-watcher",
   "engines": {
     "vscode": "^1.109.0"
   },

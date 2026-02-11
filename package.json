@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "icon": "icon.png",
   "author": "Vincenzo Perrone",
-  "publisher": "vixper",
+  "publisher": "VincenzoPerrone",
   "repository": "https://github.com/vixper/flutter-arb-watcher",
   "engines": {
     "vscode": "^1.80.0"
